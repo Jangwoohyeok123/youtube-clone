@@ -1,0 +1,29 @@
+{
+  "name": "youtube",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon babel-node src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jangwoohyeok123/youtube.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jangwoohyeok123/youtube/issues"
+  },
+  "homepage": "https://github.com/Jangwoohyeok123/youtube#readme",
+  "dependencies": {
+    "babel": "^6.23.0",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.20",
+    "pug": "^3.0.2"
+  }
+}
