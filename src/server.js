@@ -14,7 +14,6 @@ const logger = morgan("short");
 // 2. 선언을 한다.
 // 3. 선언도중 import 가 있다면 그 모듈을 실행시킨다.
 // 4. 모든 선언이 끝나면 server.js 를 실행부를 실행한다.
-// router 실행
 
 // router 에 접근할 경우 controller를 배정해주는게 목적이다.
 // get 요청이 온 후 진행될 middleware
@@ -22,7 +21,10 @@ app.set("view engine", "pug"); // express 는 view 에 pug 엔진을 사용한�
 app.use(logger);
 
 // router 등록 router : url 을 분리해주는 역할을 해줘 계층형으로 resource를 다루기 좋게 만든다.
+// globalRouter => userRouter, videoRouter 의 개념이 아니다!
 app.use("/", globalRouter);
+app.use("/users", userRouter);
+app.use("/videos", videoRouter);
 
 app.listen(port, () => {
   console.log(`server is opened in ${port} port!`);
