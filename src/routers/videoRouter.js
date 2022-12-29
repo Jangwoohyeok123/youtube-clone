@@ -1,12 +1,24 @@
 import express from "express";
+import {
+  upload,
+  edit,
+  deleteVideo,
+  watch,
+} from "../controllers/videoController.js";
 
 const videoRouter = express.Router();
-const sexRouter = express.Router();
-videoRouter.use("/sex", sexRouter);
-sexRouter.get("/sexgood", (req, res) => {
-  res.send("sex");
-});
 
-videoRouter.route(sexRouter);
+videoRouter.get("/:id", watch);
+videoRouter.get("/:id/edit", edit);
+videoRouter.get("/:id/delete", deleteVideo);
+videoRouter.get("/upload", upload);
 
 export default videoRouter;
+
+/* lan 환경
+=> router ('/videos')
+  => controller (':id')
+  => controller (':id/edit')
+  => controller (':id/delete')
+  => controller ('/upload')
+*/
