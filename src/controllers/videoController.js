@@ -8,6 +8,7 @@ export const search = (req, res) => {
   return res.send("search");
 };
 
+// controller 는 request 를 처리하고 respond 를 return 하는 역할을 지닌다.
 export const watch = (req, res) => {
   res.send("watch");
 };

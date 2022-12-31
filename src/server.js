@@ -3,10 +3,12 @@ import morgan from "morgan";
 import globalRouter from "./routers/globalRouter.js";
 import userRouter from "./routers/userRouter.js";
 import videoRouter from "./routers/videoRouter.js";
+import mysql from "mysql";
 import pug from "pug";
 
 const app = express();
 const port = 3000;
+
 const logger = morgan("short");
 // import 와 export 로 연결된 모듈들은 선언을 모조리 먼저 한 후 에 package.json 의 main 부터 시작한다.
 // export 가 먼저 실행되고
